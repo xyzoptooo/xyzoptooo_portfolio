@@ -1,0 +1,403 @@
+/* About.module.css */
+
+.aboutPage {
+    background: #0a192f;
+    color: #fff;
+    min-height: 100vh;
+  }
+  
+  /* 3D Background Section */
+  .canvasContainer {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .heroContent {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .heroTitle {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #6366f1, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  /* Main Content */
+  .mainContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* Introduction Section */
+  .introduction {
+    display: grid;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+  
+  @media (min-width: 768px) {
+    .introduction {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #e2e8f0;
+  }
+  
+  .introText {
+    font-size: 1.125rem;
+    color: #cbd5e1;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .profileImageContainer {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .profileImage {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border: 4px solid rgba(59, 130, 246, 0.1);
+  }
+  
+  .imageBorder {
+    position: absolute;
+    inset: -1rem;
+    border: 2px solid rgba(99, 102, 241, 0.2);
+    border-radius: 1.5rem;
+    z-index: -1;
+  }
+  
+  /* Skills Section */
+  .skillsSection {
+    margin-bottom: 4rem;
+  }
+  
+  .sectionHeading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #e2e8f0;
+  }
+  
+  .skillsGrid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .skillCard {
+    background: rgba(30, 41, 59, 0.5);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .skillCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .skillHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .skillIcon {
+    color: #60a5fa;
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+  }
+  
+  .skillName {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #e2e8f0;
+  }
+  
+  .progressBar {
+    width: 100%;
+    height: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+  
+  .progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #6366f1);
+    border-radius: 0.25rem;
+    transition: width 0.5s ease;
+  }
+  
+  .skillLevel {
+    display: block;
+    text-align: right;
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin-top: 0.5rem;
+  }
+  
+  /* Experience Section */
+  .experienceSection {
+    margin-bottom: 4rem;
+  }
+  
+  .experienceList {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .experienceCard {
+    background: rgba(30, 41, 59, 0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .jobTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .jobDuration {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  .jobResponsibilities {
+    list-style: none;
+    padding-left: 1rem;
+  }
+  
+  .jobResponsibilities li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+  }
+  
+  .jobResponsibilities li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+  }
+  
+  /* Certifications Section */
+  .certificationsSection {
+    margin-bottom: 4rem;
+  }
+  
+  .certificationsGrid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .certificationCard {
+    background: rgba(30, 41, 59, 0.5);
+    border-radius: 1rem;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .certificationCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .certificationImage {
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .certImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .certificationCard:hover .certImage {
+    transform: scale(1.05);
+  }
+  
+  .certificationDetails {
+    padding: 1.5rem;
+  }
+  
+  .certificationName {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-bottom: 0.25rem;
+  }
+  
+  .certificationIssuer {
+    color: #94a3b8;
+    font-size: 0.875rem;
+  }
+  
+  /* Philosophy Section */
+  .philosophySection {
+    background: linear-gradient(160deg, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.1));
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .philosophyGrid {
+    display: grid;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .philosophyGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .philosophyItem {
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .philosophyIcon {
+    font-size: 2.5rem;
+    color: #3b82f6;
+    margin-bottom: 1rem;
+  }
+  
+  .philosophyTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-bottom: 1rem;
+  }
+  
+  .philosophyText {
+    color: #cbd5e1;
+    line-height: 1.6;
+  }
+  
+  /* Call to Action Section */
+  .ctaSection {
+    text-align: center;
+    padding: 4rem 0;
+  }
+  
+  .ctaTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ctaText {
+    font-size: 1.125rem;
+    color: #cbd5e1;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+  
+  .ctaButton {
+    background: linear-gradient(45deg, #3b82f6, #6366f1);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ctaButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: 0.5s;
+  }
+  
+  .ctaButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+  }
+  
+  .ctaButton:hover::before {
+    left: 100%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .heroTitle {
+      font-size: 2.5rem;
+    }
+  
+    .sectionTitle,
+    .sectionHeading {
+      font-size: 2rem;
+    }
+  
+    .ctaTitle {
+      font-size: 2rem;
+    }
+  
+    .mainContent {
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heroTitle {
+      font-size: 2rem;
+    }
+  
+    .skillsGrid {
+      grid-template-columns: 1fr;
+    }
+  }
